@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- jquery -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        .modal-footer {
+            border-top: none !important;
+        }
+        
+        .checkbox-control {
+            margin-bottom: 10px;
+        }
+
+        .modal-footer .btn {
+            background: #fff;
+            border: 1px solid #c5c3c3;
+            position: relative;
+        }
+
+        .modal-footer .btn.save:hover {
+            color: #ff4d00 !important;
+            font-weight: bold;
+        }
+
+        .btn.save {
+            color: #ff4d00 !important;
+            font-weight: bold
+        }
+        .btn.cancel {
+            padding-left: 20px !important;
+            font-weight: bold;
+        }
+
+        .modal-body {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        input[type='checkbox'] {
+            display: none;
+        }
+
+        .modal-body label {
+            display: inline-block;
+            margin-left: 60px;
+            position: relative;
+        }
+        .modal-body label:first-child {
+            position: relative;
+            margin-left: 0;
+        }
+
+        .modal-body label:before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            border: 2px solid #ff7000;
+            left: -18px;
+            top: 2px;
+            border-radius: 2px;
+            padding: 5px;
+        }
+        input:checked + label:before {
+            background: url('ckeck_mark.svg');
+            background-repeat:no-repeat;
+        }
+        .picker {
+            padding: 15px;
+            border: 1px solid #ff7000;
+            border-style: dashed;
+            border-radius: 2px;
+            margin-bottom: 30px;
+        }
+
+        button.btn.cancel:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: url(close.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 5px;
+            top: 9px;
+        }
+
+    </style>
+</head>
+<body>
+        <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Open modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        
+            <div class="modal-body">
+                <div class="picker">
+                    <img src="confirm_po.svg" alt="">
+                </div>
+                <div class="checkbox-control">
+                    <input type="checkbox" id="p">
+                    <label for="p" style="margin-left: 0px">Picker</label>
+                    
+                    <input type="checkbox" id="r">
+                    <label for="r">Receving</label>
+
+                    <input type="checkbox" id="ru">
+                    <label for="ru">Runner</label>
+
+                    <input type="checkbox" id="s">
+                    <label for="s">Supplier</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn save" > <span class="glyphicon glyphicon-floppy-disk"></span> Save sa Draft</button>
+                <button type="button" class="btn cancel" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
